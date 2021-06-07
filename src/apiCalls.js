@@ -1,11 +1,14 @@
 const NYT_API_KEY = process.env.REACT_APP_NYT_KEY
 
 export const getTechArticles = () => {
+  console.log(process.env.REACT_APP_NYT_KEY)
   return fetch(`https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${NYT_API_KEY}`)
+  // return fetch(`https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=EAQClhAibPBE9lh954qOb9tYVaTw98ki`)
   .then((response) => {
     if(!response.ok) {
-      throw Error('Unable to get these articles at the moment, please refresh and/or try again later.')
+      throw Error(`Unable to get these articles at the moment, please refresh and/or try again later. Error ${response.error}`)
     }
     return response.json()
   })
 }
+
