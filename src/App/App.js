@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getTechArticles } from '../apiCalls';
 import './App.css';
+import CardDisplay from './CardDisplay/CardDisplay'
 
 function App() {
 
@@ -9,14 +10,13 @@ function App() {
   useEffect(() => {
     getTechArticles()
     .then(data => setTechArticles(data.results))
-    console.log(techArticles)
   },[])
   console.log(techArticles)
 
   return (
     <div className="app">
       <header className="app-header">
-      
+        {techArticles.length && <CardDisplay articlesToDisplay={techArticles}/>}
       </header>
     </div>
   );
