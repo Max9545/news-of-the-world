@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getTechArticles } from './apiCalls';
+import { getTechArticles } from '../apiCalls';
 import './App.css';
 
 function App() {
