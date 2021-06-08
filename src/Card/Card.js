@@ -12,9 +12,10 @@ function Card({ title, img, caption, authors, updated }) {
       <img src={img}/>
       <p>{caption}</p>
       <p>{authors}</p>
-      <Link to={`/article/${title}`}>See More</Link>
-      <p>{readableDate}</p>
-
+      <div className='button-date-container'>
+        <Link to={`/article/${title}`}>See More</Link>
+        <p className='date' data-cy='date'>{readableDate}</p>
+      </div>
     </div>
   )
 }
