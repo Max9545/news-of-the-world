@@ -4,6 +4,7 @@ import './App.css';
 import CardDisplay from './CardDisplay/CardDisplay'
 import Detail from './Detail/Detail'
 import { Route, Switch } from 'react-router-dom'
+import Header from '../Header/Header';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <header className="app-header">
          {/* {detail.length && 
         <Route exact path='/article/:title' render={() => <Detail/>}/> */}
+        <Header/>
         <Switch>
           <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
           <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
