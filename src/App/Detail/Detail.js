@@ -4,20 +4,28 @@ import { useEffect, useState } from "react"
 function Detail({ title, findArticle }) {
 
   const [currentArticle, setCurrentArticle] = useState()
-console.log(findArticle(title))
-console.log(title)
+  const [readableDate, setReadableDate] = useState()
 
   useEffect(() => {
     setCurrentArticle(findArticle(title))
   }, [])
 
+  useEffect(() => {
+    if(currentArticle) {
+      const newReadableDate = new Date(currentArticle.updated_date).toDateString();
+      setReadableDate(newReadableDate)
+    }
+  }, [currentArticle])
+
   const makeTopics = () => {
     return currentArticle.des_facet.map(topic => `${topic}  `)
   }
+  
 
   return (
     <>
       {currentArticle &&
+      
         <>
           <p>{currentArticle.title}</p>
           <p>{currentArticle.byline}</p>
@@ -27,6 +35,8 @@ console.log(title)
           <p>{makeTopics()}</p>
           <a href={currentArticle.url}>Go To NYT</a>
           <p>{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
+          <p>{currentArticle.title}</p>
+          <p>{readableDate}</p>
         </>
         
       }
