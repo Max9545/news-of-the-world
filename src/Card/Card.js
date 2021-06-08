@@ -8,13 +8,13 @@ function Card({ title, img, caption, authors, updated }) {
   
   return (
     <div className='card' data-cy='card'>
-      <h3 className='title' data-cy='title'>{title}</h3>
-      <img className='photo' data-cy='photo'src={img}/>
-      {/* <p className='caption' data-cy='caption'>{caption}</p> */}
+      <h3 className='card_title' data-cy='card_title'>{title}</h3>
+      <img className='card_photo' data-cy='card_photo'src={img}/>
+      <p className='card_caption' data-cy='card_caption'>{caption}</p>
       <p>{authors}</p>
-      <div className='button-date-container'>
+      <div className='card_button-date-container'>
         <Link to={`/article/${title}`}>See More</Link>
-        <p className='date' data-cy='date'>{readableDate}</p>
+        <p className='card_date' data-cy='card_date'>{readableDate}</p>
       </div>
     </div>
   )

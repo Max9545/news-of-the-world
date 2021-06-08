@@ -10,24 +10,24 @@
   /* margin: 30px; */
 }
 
-.button-date-container {
+.card_button-date-container {
   display: flex;
   justify-content: space-between;
 }
 
-.title {
+.card_title {
   font-size: .8em;
 }
 
-.date {
+.card_date {
   font-size: .3em;
 }
 
-.caption {
+.card_caption {
   font-size: .3em;
 }
 
-.photo {
+.card_photo {
   /* height: 70px; */
   width: 150px;
 }
