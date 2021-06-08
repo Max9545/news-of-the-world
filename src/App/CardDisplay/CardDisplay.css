@@ -1,0 +1,7 @@
+.card-display {
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2vw;
+  row-gap: 2vh
+}

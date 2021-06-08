@@ -11,7 +11,7 @@ function App() {
     getTechArticles()
     .then(data => setTechArticles(data.results))
   },[])
-  console.log(techArticles)
+
 
   return (
     <div className="app">

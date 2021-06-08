@@ -1,9 +1,12 @@
 import './Card.css'
 
-function Card({ article }) {
-  console.log(article)
+function Card({ title, img }) {
+  console.log(title)
   return (
-   <p>{article.title}</p>
+    <div className='card' data-cy='card'>
+      <h3>{title}</h3>
+      <img src={img}/>
+    </div>
   )
 }
 
