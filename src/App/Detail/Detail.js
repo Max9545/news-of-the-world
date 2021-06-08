@@ -25,6 +25,8 @@ console.log(title)
           <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
           <p className='detail_caption' data-cy='detail_card_caption'>{currentArticle.multimedia[0].caption}</p>
           <p>{makeTopics()}</p>
+          <a href={currentArticle.url}>Go To NYT</a>
+          <p>{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
         </>
         
       }
