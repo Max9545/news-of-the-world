@@ -9,6 +9,8 @@ function CardDisplay({ articlesToDisplay }) {
       return <Card 
                 title={article.title}
                 img={article.multimedia[4].url}
+                caption={article.multimedia[4].caption}
+                authors={article.byline}
              />
     })
   }
