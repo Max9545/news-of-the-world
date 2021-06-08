@@ -8,7 +8,7 @@ function Card({ title, img, caption, authors }) {
       <img src={img}/>
       <p>{caption}</p>
       <p>{authors}</p>
-      <butto>See More</button>
+      <button>See More</button>
     </div>
   )
 }

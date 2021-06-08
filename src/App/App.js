@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getTechArticles } from '../apiCalls';
 import './App.css';
 import CardDisplay from './CardDisplay/CardDisplay'
+import { Route } from 'react-router-dom'
 
 function App() {
 
@@ -16,7 +17,9 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        {techArticles.length && <CardDisplay articlesToDisplay={techArticles}/>}
+        {techArticles.length && 
+        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
+        }
       </header>
     </div>
   );
