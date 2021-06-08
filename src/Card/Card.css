@@ -1,11 +1,13 @@
 .card {
   border: solid 1px black;
-  width: 200px;
+  width: 160px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 3%;
-  /* height: 30vh; */
+  background-color: blueviolet;
+  /* margin: 30px; */
 }
 
 .button-date-container {
@@ -13,7 +15,20 @@
   justify-content: space-between;
 }
 
+.title {
+  font-size: .8em;
+}
+
 .date {
   font-size: .3em;
-
 }
+
+.caption {
+  font-size: .3em;
+}
+
+.photo {
+  /* height: 70px; */
+  width: 150px;
+}
+

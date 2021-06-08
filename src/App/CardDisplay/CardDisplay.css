@@ -1,7 +1,9 @@
 .card-display {
-  padding: 5%;
+  padding: 2%;
   display: grid;
+  width: 100vw;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2vw;
-  row-gap: 2vh
+  /* column-gap: 2vw; */
+  row-gap: 2vh;
+  background-color:red
 }
