@@ -11,6 +11,7 @@ function CardDisplay({ articlesToDisplay }) {
                 img={article.multimedia[4].url}
                 caption={article.multimedia[4].caption}
                 authors={article.byline}
+                updated={article.updated_date}
              />
     })
   }
