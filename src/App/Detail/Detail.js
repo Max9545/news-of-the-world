@@ -17,8 +17,11 @@ function Detail({ title, findArticle }) {
     }
   }, [currentArticle])
 
-  const showList = () => {
-    return currentArticle.des_facet.map(topic => `${topic}  `)
+  const showList = (list) => {
+    if (list.length) {
+      return list.map(topic => `${topic}  `)
+    }
+    return 'None at this time'
   }
   
 
@@ -32,12 +35,13 @@ function Detail({ title, findArticle }) {
           <p>{currentArticle.abstract}</p>
           <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
           <p className='detail_caption' data-cy='detail_card_caption'>{currentArticle.multimedia[0].caption}</p>
-          <p>{showList()}</p>
+          <p>{showList(currentArticle.des_facet)}</p>
           <a href={currentArticle.url}>Go To NYT</a>
           <p>{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
           <p>{currentArticle.title}</p>
           <p>{readableDate}</p>
           <p>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
+          <p>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
         </>
       }
     </>
