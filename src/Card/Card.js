@@ -1,4 +1,5 @@
 import './Card.css'
+import { Link } from 'react-router-dom'
 
 function Card({ title, img, caption, authors }) {
   console.log(title)
@@ -8,7 +9,7 @@ function Card({ title, img, caption, authors }) {
       <img src={img}/>
       <p>{caption}</p>
       <p>{authors}</p>
-      <button>See More</button>
+      <Link to={`/article/${title}`}>See More</Link>
     </div>
   )
 }
