@@ -21,7 +21,7 @@ function Detail({ title, findArticle }) {
     if (list.length) {
       return list.map(topic => <p className='detail_list-element' data-cy='detail_list-element'>{`${topic}  `}</p>)
     }
-    return 'None at this time'
+    return <p className='detail_list-element' data-cy='detail_list-element'>'None at this time'</p>
   }
   
 
@@ -37,11 +37,10 @@ function Detail({ title, findArticle }) {
           <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
           <p className='detail_topics' data-cy='detail_topics'>{showList(currentArticle.des_facet)}</p>
           <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To NYT</a>
-          <p>{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
-          <p>{currentArticle.title}</p>
-          <p>{readableDate}</p>
-          <p>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
-          <p>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
+          <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
+          <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
+          <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
+          <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
         </>
       }
     </>
