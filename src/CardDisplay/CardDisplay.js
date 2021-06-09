@@ -1,5 +1,5 @@
 import './CardDisplay.css'
-import Card from '../../Card/Card'
+import Card from '../Card/Card'
 
 function CardDisplay({ articlesToDisplay }) {
 

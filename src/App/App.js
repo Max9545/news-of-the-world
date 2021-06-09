@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getTechArticles } from '../apiCalls';
 import './App.css';
-import CardDisplay from './CardDisplay/CardDisplay'
+import CardDisplay from '../CardDisplay/CardDisplay'
 import Detail from '../Detail/Detail'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header';
