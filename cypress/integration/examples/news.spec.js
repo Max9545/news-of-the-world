@@ -10,6 +10,7 @@ context('Actions', () => {
   it('Should have a header', () => {
     cy
     .get('[data-cy=header]').should('exist')
+    .should('contain', 'News Of THe World')
   })
 
 })
