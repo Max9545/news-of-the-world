@@ -15,7 +15,7 @@ context('Actions', () => {
     .should('contain', 'News Of THe World')
   })
 
-  it.only('Should have articles for the user to choose from on a series of cards', () => {
+  it('Should have articles for the user to choose from on a series of cards', () => {
     cy
     .get('[data-cy=card_title]').should('exist')
     .should('contain', 'Uber and Lyft Ramp Up Legislative Efforts to Shield Business Model')
@@ -31,6 +31,15 @@ context('Actions', () => {
     .should('contain', 'See More')
     .get('[data-cy=card_date]').should('exist')
     .should('contain', 'Wed Jun 09 2021')
+  })
+
+  it('Should multiple cards', () => {
+    cy
+    .get('[data-cy=card_title]').should('exist')
+    .should('contain', 'What to Know About the Newest iPhone and Android Software')
+    cy
+    .get('[data-cy=card_authors]').should('exist')
+    .should('contain', 'By Brian X. Chen')
   })
 
 })
