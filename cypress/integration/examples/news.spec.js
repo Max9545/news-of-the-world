@@ -2,6 +2,8 @@
 
 context('Actions', () => {
   beforeEach(() => {
+    
+    cy.intercept(`https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=EAQClhAibPBE9lh954qOb9tYVaTw98ki`, {fixture: 'articles.json'})
     cy.visit('http://localhost:3000/')
   })
 
