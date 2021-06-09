@@ -37,9 +37,35 @@ context('Actions', () => {
     cy
     .get('[data-cy=card_title]').should('exist')
     .should('contain', 'What to Know About the Newest iPhone and Android Software')
-    cy
     .get('[data-cy=card_authors]').should('exist')
     .should('contain', 'By Brian X. Chen')
   })
 
+  it.only('Should go to a details page on click of an article and show more informaion', () => {
+    cy
+    .get('[data-cy=card_button]').first()
+    .click()
+    .get('[data-cy=detail_title]').should('exist')
+    .should('contain', 'Uber and Lyft Ramp Up Legislative Efforts to Shield Business Model')
+    .get('[data-cy=detail_authors]').should('exist')
+    .should('contain', 'By Noam Scheiber')
+    .get('[data-cy=detail_abstract]').should('exist')
+    .should('contain', 'Gig economy companies are backing state laws in New York and elsewhere that would cement drivers’ status as contractors in exchange for a union')
+    .get('[data-cy=detail_photo]').should('exist')
+    .should('have.attr', 'src', 'https://static01.nyt.com/images/2021/06/07/nyregion/00gig-worker01/00gig-worker01-superJumbo.jpg')
+    .get('[data-cy=detail_caption]').should('exist')
+    .should('contain', 'Driving for Uber in Manhattan. Gig companies like Uber and Lyft have long resisted classifying workers as employees.')
+    .get('[data-cy=detail_list-element]').should('exist')
+    .should('contain', 'Wages and Salaries')
+    .should('contain', 'Labor and Jobs')
+    .should('contain', 'Organized Labor')
+    .should('contain', 'Collective Bargaining')
+    .should('contain', 'Freelancing, Self-Employment and Independent Contracting')
+    .should('contain', 'Regulation and Deregulation of Industry')
+    .should('contain', 'Car-Pooling and Ride-Sharing')
+    .should('contain', 'Law and Legislation')
+    
+    // .get('[data-cy=detail_link-to-NYT]').should('exist')
+    // .should('contain', 'Go To NYT')
+  })
 })
