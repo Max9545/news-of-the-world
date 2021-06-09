@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <h1>News Of THe World</h1>
+    <h1 className='header' date-cy='header'>News Of THe World</h1>
   )
 }
 

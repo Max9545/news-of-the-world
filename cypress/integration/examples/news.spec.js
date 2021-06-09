@@ -2,13 +2,14 @@
 
 context('Actions', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/actions')
+    cy.visit('http://localhost:3000/')
   })
 
   // https://on.cypress.io/interacting-with-elements
 
-  it('.type() - type into a DOM element', () => {
-    
+  it('Should have a header', () => {
+    cy
+    .get('[data-cy=header]').should('exist')
   })
 
 })

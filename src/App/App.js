@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getTechArticles } from '../apiCalls';
 import './App.css';
 import CardDisplay from './CardDisplay/CardDisplay'
-import Detail from './Detail/Detail'
+import Detail from '../Detail/Detail'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header';
 
@@ -26,7 +26,6 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
          {/* {detail.length && 
         <Route exact path='/article/:title' render={() => <Detail/>}/> */}
         <Header/>
@@ -37,7 +36,6 @@ function App() {
         {/* {techArticles.length && 
         <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
         } */}
-      </header>
     </div>
   );
 }
