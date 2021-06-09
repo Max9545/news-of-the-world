@@ -41,7 +41,7 @@ context('Actions', () => {
     .should('contain', 'By Brian X. Chen')
   })
 
-  it.only('Should go to a details page on click of an article and show more informaion', () => {
+  it('Should go to a details page on click of an article and show more informaion', () => {
     cy
     .get('[data-cy=card_button]').first()
     .click()

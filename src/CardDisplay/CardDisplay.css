@@ -1,9 +1,12 @@
 .card-display {
   padding: 2%;
-  display: grid;
   width: 100vw;
-  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   /* column-gap: 2vw; */
-  row-gap: 2vh;
-  background-color:red
+  /* row-gap: 2vh; */
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#006CD1
 }

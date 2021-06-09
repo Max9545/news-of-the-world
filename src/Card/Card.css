@@ -1,13 +1,14 @@
 .card {
   border: solid 1px black;
   width: 160px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 3%;
-  background-color: blueviolet;
-  /* margin: 30px; */
+  background-color: #994F00;
+  margin: 30px;
 }
 
 .card_button-date-container {
