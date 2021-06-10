@@ -1,5 +1,5 @@
 .card {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 260px;
   height: 300px;
   border-radius: 4px;
@@ -7,9 +7,9 @@
   flex-direction: column;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-  padding: 10px;
+  padding: 5px 5px 0 5px;
   background-color: #994F00;
-  margin: 12px 5px 12px 5px;
+  margin: 12px 6px 12px 6px;
   align-self: center;
   align-content: center;
 }
@@ -24,17 +24,21 @@
   background-color: #006CD1;
   padding: 2%;
   font-weight: bolder;
-  border-radius: 2px;
+  border-radius: 5px 5px 0 0;
   color: aliceblue;
   text-decoration: none;
   text-align: center;
+}
+
+.card_button:hover {
+  cursor: pointer;
 }
 
 .card_title {
   margin: 0;
   font-weight: bolder;
   color: snow;
-  font-size: .88em;
+  font-size: .8em;
   padding:  9px;
   border: 1px 
 }
@@ -44,7 +48,8 @@
   border-radius: 2px;
   background-color: #3C7C18;
   color: white;
-  font-size: .4em;
+  font-size: .8em;
+  margin-bottom: 5px;
 }
 
 .card_authors {
@@ -56,8 +61,8 @@
 }
 
 .card_photo {
-  max-height: 150px;
-  width: 150px;
+  max-height: 115px;
+  /* width: 150px; */
   align-self: center;
 }
 
