@@ -17,7 +17,7 @@ function CardDisplay({ articlesToDisplay }) {
   }
   return (
     <>
-      <h2>Tech Today</h2>
+      <h2 className='articles-type' data-cy='articles-type'>Tech Today</h2>
       <div className='card-display' data-cy='card-display'>
         {articlesToDisplay && makeCards(articlesToDisplay)}
       </div>

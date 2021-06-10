@@ -8,3 +8,8 @@
   justify-content: space-evenly;
   background-color:#006CD1
 }
+
+.articles-type {
+  margin: 0;
+  padding-left: 8px;
+}
