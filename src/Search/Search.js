@@ -7,11 +7,11 @@ function Search() {
 
   return (
     
-    <select>
-    // <label>Section</label>
-    hi
+    <select >
+      {timesTypes && timesTypes.map(timesType => <option value={timesType}>{timesType}</option>)}
     </select>
   )
 }
 
 export default Search
+// onChange={e => handleChange}

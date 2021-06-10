@@ -26,12 +26,12 @@ function App() {
 
   return (
     <div className="app">
-        <Header/>
-        <Switch>
-          <Search></Search>
-          <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
-          <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
-        </Switch>
+      <Header/>
+      <Search className='search' data-cy='search'/>
+      <Switch>
+        <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
+        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
+      </Switch>
     </div>
   );
 }
