@@ -1,16 +1,17 @@
 .card {
   border: solid 1px black;
-  width: 160px;
+  width: 260px;
   height: 300px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-  padding: 30px;
+  padding: 10px;
   background-color: #994F00;
   margin: 12px 5px 12px 5px;
   align-self: center;
+  align-content: center;
 }
 
 .card_button-date-container {
@@ -30,9 +31,12 @@
 }
 
 .card_title {
-  font-size: .8em;
+  margin: 0;
+  font-weight: bolder;
+  color: snow;
+  font-size: .88em;
   padding:  9px;
-  border: 1px solid snow
+  border: 1px 
 }
 
 .card_date {
@@ -45,12 +49,15 @@
 
 .card_authors {
   color: white;
+  padding: 2px;
   font-weight: bold;
-  font-size: .5em;
+  font-size: .6em;
+  border: 7px double #3C7C18
 }
 
 .card_photo {
   max-height: 150px;
   width: 150px;
+  align-self: center;
 }
 

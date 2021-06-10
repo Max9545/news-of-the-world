@@ -1,10 +1,10 @@
 .card-display {
-  padding: 2%;
+  padding: 1% 0 1% 0;
   width: 100vw;
   min-height: 100vh;
   /* align-content: center; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color:#006CD1
 }
