@@ -24,16 +24,11 @@ function App() {
 
   return (
     <div className="app">
-         {/* {detail.length && 
-        <Route exact path='/article/:title' render={() => <Detail/>}/> */}
         <Header/>
         <Switch>
           <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
           <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
         </Switch>
-        {/* {techArticles.length && 
-        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
-        } */}
     </div>
   );
 }
