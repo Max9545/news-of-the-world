@@ -1,7 +1,8 @@
 import './CardDisplay.css'
 import Card from '../Card/Card'
+import Search from '../Search/Search';
 
-function CardDisplay({ articlesToDisplay, type }) {
+function CardDisplay({ articlesToDisplay, type, setType }) {
 
   const makeCards = (currentArticles) => {
 
@@ -17,7 +18,10 @@ function CardDisplay({ articlesToDisplay, type }) {
   }
   return (
     <>
-      <h2 className='articles-type' data-cy='articles-type'>{`${type.charAt(0).toUpperCase() + type.slice(1)} Times`}</h2>
+      <div className='header-search-container'>
+        <h2 className='articles-type' data-cy='articles-type'>{`${type.charAt(0).toUpperCase() + type.slice(1)} Times`}</h2>
+        <Search setType={setType} className='search' data-cy='search'/>
+      </div>
       <div className='card-display' data-cy='card-display'>
         {articlesToDisplay && makeCards(articlesToDisplay)}
       </div>
