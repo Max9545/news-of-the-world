@@ -109,5 +109,12 @@
   /* width: 100%; */
 }
 
+.detail_date {
+  background-color: #3C7C18;
+  padding: 1%;
+  color: snow;
+  text-align: center;
+}
+
 
 
