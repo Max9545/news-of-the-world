@@ -2,11 +2,9 @@
   padding: 2%;
   width: 100vw;
   min-height: 100vh;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-  /* column-gap: 2vw; */
-  /* row-gap: 2vh; */
+  /* align-content: center; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   background-color:#006CD1
 }

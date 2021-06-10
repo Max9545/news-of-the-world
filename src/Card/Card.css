@@ -1,35 +1,56 @@
 .card {
   border: solid 1px black;
   width: 160px;
-  max-height: 500px;
+  height: 300px;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-  padding: 3%;
+  padding: 30px;
   background-color: #994F00;
-  margin: 30px;
+  margin: 12px 5px 12px 5px;
+  align-self: center;
 }
 
 .card_button-date-container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.card_button {
+  background-color: #006CD1;
+  padding: 2%;
+  font-weight: bolder;
+  border-radius: 2px;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
 }
 
 .card_title {
   font-size: .8em;
+  padding:  9px;
+  border: 1px solid snow
 }
 
 .card_date {
-  font-size: .3em;
+  padding: 3px 2px 3px 2px;
+  border-radius: 2px;
+  background-color: #3C7C18;
+  color: white;
+  font-size: .4em;
 }
 
-.card_caption {
-  font-size: .3em;
+.card_authors {
+  color: white;
+  font-weight: bold;
+  font-size: .5em;
 }
 
 .card_photo {
-  /* height: 70px; */
+  max-height: 150px;
   width: 150px;
 }
 
