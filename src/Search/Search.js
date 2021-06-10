@@ -11,7 +11,12 @@ function Search({ setType }) {
   return (
     
     <select onChange={(e) => handleChange(e)}>
-      {timesTypes && timesTypes.map(timesType => <option value={timesType}>{timesType}</option>)}
+      {timesTypes && 
+        <>
+        <option value="" selected disabled hidden>Choose Section</option>
+       {timesTypes.map(timesType => <option value={timesType}>{timesType}</option>)}
+        </>
+      }
     </select>
   )
 }

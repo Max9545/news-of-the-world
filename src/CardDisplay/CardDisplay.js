@@ -1,7 +1,7 @@
 import './CardDisplay.css'
 import Card from '../Card/Card'
 
-function CardDisplay({ articlesToDisplay }) {
+function CardDisplay({ articlesToDisplay, type }) {
 
   const makeCards = (currentArticles) => {
 
@@ -17,7 +17,7 @@ function CardDisplay({ articlesToDisplay }) {
   }
   return (
     <>
-      <h2 className='articles-type' data-cy='articles-type'>Tech Today</h2>
+      <h2 className='articles-type' data-cy='articles-type'>{`${type.charAt(0).toUpperCase() + type.slice(1)} Times`}</h2>
       <div className='card-display' data-cy='card-display'>
         {articlesToDisplay && makeCards(articlesToDisplay)}
       </div>

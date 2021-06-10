@@ -31,7 +31,7 @@ function App() {
       <Search setType={setType} className='search' data-cy='search'/>
       <Switch>
         <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
-        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={articles}/>}/>
+        <Route exact path='/' render={() => <CardDisplay type={type}articlesToDisplay={articles}/>}/>
       </Switch>
     </div>
   );
