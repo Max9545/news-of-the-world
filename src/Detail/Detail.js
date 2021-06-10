@@ -51,11 +51,13 @@ function Detail({ title, findArticle }) {
             <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
           </div>
           <p className='detail_topics-container' data-cy='detail_topics-container'>Topics: {showTopics(currentArticle.des_facet)}</p>
-
-          <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
-          <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
-          <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
-          <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
+          <div className='detail_sections-date-orgs-people-container'>
+            <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
+            <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
+            <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
+            <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
+          </div>
+          
         </div>
       }
     </>
