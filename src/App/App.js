@@ -17,8 +17,6 @@ function App() {
 
   const findArticle = (title) => {
     return techArticles.find(article => {
-      console.log(article.title)
-      console.log(title)
       return article.title === title
     })
   }

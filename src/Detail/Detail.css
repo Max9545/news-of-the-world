@@ -78,7 +78,7 @@
   background-color: snow;
   border-radius: 5px;
   padding: 0 5px 0 5px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .detail_abstract-photo-caption-container {
@@ -107,7 +107,6 @@
   background-color: snow;
   padding: 1%;
   /* width: 100%; */
-
 }
 
 

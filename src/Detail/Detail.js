@@ -19,17 +19,22 @@ function Detail({ title, findArticle }) {
   }, [currentArticle])
 
   const showTopics = (list) => {
+
     if (list.length) {
       return list.map(topic => <p className='detail_topic-element' data-cy='detail_topic-element'>{`${topic}`}</p>)
     }
     return <p className='detail_no-elements' data-cy='detail_no-elements'>None at this time</p>
   }
 
-  const showList = (list, type) => {
+  const showRelevantList = (list) => {
+    
     if (list.length) {
-      return list.map(topic => <p className='detail_list-element' data-cy='detail_list-element'>{`${topic}  `}</p>)
+      console.log(list)
+      return list.map(item => item)
+      // return list.map(relevant => <p className='detail_list-element' data-cy='detail_list-element'>{relevant}</p>
+      // )
     }
-    return <p className='detail_list-element' data-cy='detail_list-element'>'None at this time'</p>
+    return <p lassName='detail_no-elements' data-cy='detail_no-elements'>None at this time</p>
   }
   
   return (
@@ -54,8 +59,8 @@ function Detail({ title, findArticle }) {
           <div className='detail_sections-date-orgs-people-container'>
             <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
             <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
-            <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
-            <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
+            <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showRelevantList(currentArticle.org_facet)}`}</p>
+            <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showRelevantList(currentArticle.per_facet)}`}</p>
           </div>
           
         </div>
