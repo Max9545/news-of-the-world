@@ -14,7 +14,8 @@
   background-color: #994F00;
   /* width: 100vw; */
   padding: 0 4px 0 4px;
-  border-radius: 5px
+  border-radius: 5px;
+  margin: 0
 }
 
 .detail_title {
@@ -24,10 +25,14 @@
 .detail_photo {
   height: 300px;
   max-width: 100%;
+  /* align-self: flex-end; */
 }
 
 .detail_abstract {
   color: snow;
+  border: 7px double #3C7C18;
+  padding: 2px;
+  margin: 0 0 4px 0;
 }
 
 .detail_caption {
@@ -38,3 +43,9 @@
   padding: 0 5px 0 5px;
 }
 
+.detail_abstract-photo-caption-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  /* align-content: center; */
+}
