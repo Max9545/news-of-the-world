@@ -9,4 +9,3 @@ export const getTechArticles = () => {
     return response.json()
   })
 }
-
