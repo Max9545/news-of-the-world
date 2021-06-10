@@ -39,7 +39,7 @@ function Detail({ title, findArticle }) {
         <div className='detail'>
           <div className='detail_links-container'>
             <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
-            <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To NYT</a>
+            <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To Full NYT Article</a>
           </div>
           <div className='detail_title-author-container'>
             <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
