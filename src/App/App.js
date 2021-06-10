@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getTechArticles } from '../apiCalls';
+import { getArticles } from '../apiCalls';
 import './App.css';
 import CardDisplay from '../CardDisplay/CardDisplay'
 import Search from '../Search/Search';
@@ -13,10 +13,9 @@ function App() {
   const [type, setType] = useState('technology')
 
   useEffect(() => {
-    getTechArticles()
-    // .then(data => console.log(data))
+    getArticles(type)
     .then(data => setArticles(data.results))
-  },[])
+  },[type])
 
   const findArticle = (title) => {
     return articles.find(article => {
