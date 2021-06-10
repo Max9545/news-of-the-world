@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getTechArticles } from '../apiCalls';
 import './App.css';
 import CardDisplay from '../CardDisplay/CardDisplay'
+import Search from '../Search/Search';
 import Detail from '../Detail/Detail'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header';
@@ -27,6 +28,7 @@ function App() {
     <div className="app">
         <Header/>
         <Switch>
+          <Search></Search>
           <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
           <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
         </Switch>
