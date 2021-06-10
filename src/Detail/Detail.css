@@ -1,6 +1,7 @@
 .detail {
   background-color:#006CD1;
   padding: 5px;
+  width: 100vw;
 }
 
 .detail-to-home {
@@ -15,7 +16,8 @@
   /* width: 100vw; */
   padding: 0 4px 0 4px;
   border-radius: 5px;
-  margin: 0
+  margin: 0;
+  width: 100%;
 }
 
 .detail_title {
@@ -24,7 +26,7 @@
 
 .detail_photo {
   height: 300px;
-  max-width: 100%;
+  /* width: 100%; */
   /* align-self: flex-end; */
 }
 
@@ -48,4 +50,14 @@
   flex-direction: column;
   justify-content: center; 
   /* align-content: center; */
+}
+
+
+
+.detail_topics-container {
+  display: flex;
+
+}
+.detail_topic-element {
+
 }

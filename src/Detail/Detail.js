@@ -18,14 +18,20 @@ function Detail({ title, findArticle }) {
     }
   }, [currentArticle])
 
-  const showList = (list) => {
+  const showTopics = (list) => {
+    if (list.length) {
+      return list.map(topic => <p className='detail_topic-element' data-cy='detail_topic-element'>{`${topic}  `}</p>)
+    }
+    return <p className='detail_no-elements' data-cy='detail_no-elements'>'None at this time'</p>
+  }
+
+  const showList = (list, type) => {
     if (list.length) {
       return list.map(topic => <p className='detail_list-element' data-cy='detail_list-element'>{`${topic}  `}</p>)
     }
     return <p className='detail_list-element' data-cy='detail_list-element'>'None at this time'</p>
   }
   
-
   return (
     <>
       {currentArticle &&
@@ -41,7 +47,7 @@ function Detail({ title, findArticle }) {
             <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
             <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
           </div>
-          <p className='detail_topics' data-cy='detail_topics'>{showList(currentArticle.des_facet)}</p>
+          <p className='detail_topics-container' data-cy='detail_topics-container'>Topics:{showTopics(currentArticle.des_facet)}</p>
           <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To NYT</a>
           <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
           <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
