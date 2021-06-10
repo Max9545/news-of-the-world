@@ -1,6 +1,6 @@
 .detail {
   background-color:#006CD1;
-  padding: 5px;
+  padding: 5px 9px 0 9px;
   width: 100vw;
 }
 
@@ -56,8 +56,14 @@
 
 .detail_topics-container {
   display: flex;
-
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #994F00;
+  padding: 3px;
 }
 .detail_topic-element {
-
+  font-size: .5em;
+  background-color:#3C7C18;
+  padding: 2px;
+  /* margin: 3%; */
 }
