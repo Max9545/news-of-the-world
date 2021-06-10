@@ -12,6 +12,7 @@ function App() {
 
   useEffect(() => {
     getTechArticles()
+    // .then(data => console.log(data))
     .then(data => setTechArticles(data.results))
   },[])
 

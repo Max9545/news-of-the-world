@@ -7,7 +7,7 @@ function CardDisplay({ articlesToDisplay }) {
 
     return currentArticles.map(article => {
       return <Card 
-                title={article.title}
+                title={article.title.replaceAll('%','Percent')}
                 img={article.multimedia[4].url}
                 caption={article.multimedia[4].caption}
                 authors={article.byline}
