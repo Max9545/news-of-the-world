@@ -1,13 +1,39 @@
 .detail {
   background-color:#006CD1;
-  padding: 5px 9px 0 9px;
+  /* padding: 5px 9px 0 9px; */
+  padding: 5%;
   width: 100vw;
 }
+
+.detail_links-container {
+  display: flex;
+  /* flex-direction: column; */
+  padding: 0 10px 0 10px;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.detail_link-to-NYT {
+  background-color: snow;
+  padding: 2px 0px 2px 6px;
+  font-weight: bolder;
+  border-radius: 5px;
+  color: #3C7C18;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  width: 110px;
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
 
 .detail-to-home {
   color:snow;
   text-decoration: none;
   margin: 0;
+  width: 85px;
+  font-size: 1.1em;
 }
 
 .detail_title-author-container {
@@ -52,14 +78,13 @@
   /* align-content: center; */
 }
 
-
-
 .detail_topics-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: #994F00;
   padding: 3px;
+  width: 100vw;
 }
 .detail_topic-element {
   font-size: .5em;
@@ -67,3 +92,6 @@
   padding: 2px;
   /* margin: 3%; */
 }
+
+
+

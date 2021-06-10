@@ -37,7 +37,10 @@ function Detail({ title, findArticle }) {
       {currentArticle &&
       
         <div className='detail'>
-          <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
+          <div className='detail_links-container'>
+            <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
+            <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To NYT</a>
+          </div>
           <div className='detail_title-author-container'>
             <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
             <p className='detail_authors' data-cy='detail_authors'>{currentArticle.byline}</p>
@@ -48,7 +51,7 @@ function Detail({ title, findArticle }) {
             <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
           </div>
           <p className='detail_topics-container' data-cy='detail_topics-container'>Topics: {showTopics(currentArticle.des_facet)}</p>
-          <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To NYT</a>
+
           <p className='detail_news-sections' data-cy='detail_news-sections' >{`Section: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
           <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
           <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
