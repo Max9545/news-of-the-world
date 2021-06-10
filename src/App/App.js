@@ -10,7 +10,7 @@ import Header from '../Header/Header';
 function App() {
 
   const [articles, setArticles] = useState([])
-  const [type, setType] = useState('')
+  const [type, setType] = useState('technology')
 
   useEffect(() => {
     getTechArticles()
