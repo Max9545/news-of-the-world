@@ -30,10 +30,12 @@ function Detail({ title, findArticle }) {
     <>
       {currentArticle &&
       
-        <>
-          <Link className='details-to-home' data-cy='details-to-home' to='/'>⬅ Back</Link>
-          <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
-          <p className='detail_authors' data-cy='detail_authors'>{currentArticle.byline}</p>
+        <div className='detail'>
+          <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
+          <div className='detail_title-author-container'>
+            <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
+            <p className='detail_authors' data-cy='detail_authors'>{currentArticle.byline}</p>
+          </div>
           <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>
           <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
           <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
@@ -43,7 +45,7 @@ function Detail({ title, findArticle }) {
           <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
           <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showList(currentArticle.org_facet)}`}</p>
           <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showList(currentArticle.per_facet)}`}</p>
-        </>
+        </div>
       }
     </>
   )
