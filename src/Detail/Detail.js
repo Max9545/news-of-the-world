@@ -1,5 +1,6 @@
 import './Detail.css'
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
 
 function Detail({ title, findArticle }) {
 
@@ -30,6 +31,7 @@ function Detail({ title, findArticle }) {
       {currentArticle &&
       
         <>
+          <Link className='details-to-home' data-cy='details-to-home' to='/'>⬅ Back</Link>
           <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
           <p className='detail_authors' data-cy='detail_authors'>{currentArticle.byline}</p>
           <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>
