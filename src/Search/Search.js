@@ -1,3 +1,4 @@
+import './Search.css'
 import { useState } from "react";
 
 function Search({ setType }) {
@@ -10,7 +11,7 @@ function Search({ setType }) {
  
   return (
     
-    <select onChange={(e) => handleChange(e)}>
+    <select className='search' data-cy='search'onChange={(e) => handleChange(e)}>
       {timesTypes && 
         <>
         <option value="" selected disabled hidden>Choose Section</option>

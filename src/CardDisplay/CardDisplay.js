@@ -18,9 +18,9 @@ function CardDisplay({ articlesToDisplay, type, setType }) {
   }
   return (
     <>
-      <div className='header-search-container'>
+      <div className='type-search-container'>
         <h2 className='articles-type' data-cy='articles-type'>{`${type.charAt(0).toUpperCase() + type.slice(1)} Times`}</h2>
-        <Search setType={setType} className='search' data-cy='search'/>
+        <Search setType={setType}/>
       </div>
       <div className='card-display' data-cy='card-display'>
         {articlesToDisplay && makeCards(articlesToDisplay)}
