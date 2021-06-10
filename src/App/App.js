@@ -9,16 +9,17 @@ import Header from '../Header/Header';
 
 function App() {
 
-  const [techArticles, setTechArticles] = useState([])
+  const [articles, setArticles] = useState([])
+  const [type, setType] = useState('')
 
   useEffect(() => {
     getTechArticles()
     // .then(data => console.log(data))
-    .then(data => setTechArticles(data.results))
+    .then(data => setArticles(data.results))
   },[])
 
   const findArticle = (title) => {
-    return techArticles.find(article => {
+    return articles.find(article => {
       return article.title === title
     })
   }
@@ -27,10 +28,10 @@ function App() {
   return (
     <div className="app">
       <Header/>
-      <Search className='search' data-cy='search'/>
+      <Search setType={setType} className='search' data-cy='search'/>
       <Switch>
         <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
-        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={techArticles}/>}/>
+        <Route exact path='/' render={() => <CardDisplay articlesToDisplay={articles}/>}/>
       </Switch>
     </div>
   );
