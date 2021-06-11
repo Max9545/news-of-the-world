@@ -42,7 +42,7 @@ function Detail({ title, findArticle }) {
     <>
       {!currentArticle && 
         <>
-        <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
+        <Link className='detail-to-home' data-cy='detail-to-home' style={{color:'black'}} to='/'> ⬅ Back</Link>
         <p>Sorry, Could Not Find The Details For This Article At This time</p>
         </>
         }
