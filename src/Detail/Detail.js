@@ -58,17 +58,19 @@ function Detail({ title, findArticle }) {
             <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
             <p className='detail_authors' data-cy='detail_authors'>{currentArticle.byline}</p>
           </div>
-          <div className='detail_abstract-photo-caption-container'>
-            <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>
-            <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
-            <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
-          </div>
-          <p className='detail_topics-container' data-cy='detail_topics-container'>Topics: {showTopics(currentArticle.des_facet)}</p>
-          <div className='detail_sections-date-orgs-people-container'>
-            <p className='detail_news-sections' data-cy='detail_news-sections' >{`Sections: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
-            <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
-            <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showRelevantList(currentArticle.org_facet)}`}</p>
-            <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showRelevantList(currentArticle.per_facet)}`}</p>
+          <div className='lower-half-container'>
+            <div className='detail_abstract-photo-caption-container'>
+              <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>
+              <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
+              <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
+            </div>
+            <div className='detail_topics-sections-date-orgs-people-container'>
+              <p className='detail_topics-container' data-cy='detail_topics-container'>Topics: {showTopics(currentArticle.des_facet)}</p>
+              <p className='detail_news-sections' data-cy='detail_news-sections' >{`Sections: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
+              <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
+              <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showRelevantList(currentArticle.org_facet)}`}</p>
+              <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showRelevantList(currentArticle.per_facet)}`}</p>
+            </div>
           </div>
         </div>
       }
