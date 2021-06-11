@@ -29,7 +29,6 @@ function Detail({ title, findArticle }) {
   const showRelevantList = (list) => {
     
     if (list.length) {
-      console.log(list)
       return list.map(item => item)
       // return list.map(relevant => {
       //   return <p className='detail_list-element' data-cy='detail_list-element'>{`${relevant}`}</p>
@@ -61,8 +60,8 @@ function Detail({ title, findArticle }) {
           <div className='lower-half-container'>
             <div className='detail_abstract-photo-caption-container'>
               {currentArticle.abstract && <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>}
-              <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
-              <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
+              {currentArticle.multimedia && <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>}
+              <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia &&  currentArticle.multimedia[0].caption}</p>
             </div>
             <div className='detail_topics-sections-date-orgs-people-container'>
               <p className='detail_topics-container' data-cy='detail_topics-container'>Topics: {showTopics(currentArticle.des_facet)}</p>
