@@ -52,7 +52,7 @@ function Detail({ title, findArticle }) {
         <div className='detail'>
           <div className='detail_links-container'>
             <Link className='detail-to-home' data-cy='detail-to-home' to='/'> ⬅ Back</Link>
-            <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url}>Go To Full NYT Article</a>
+            <a className='detail_link-to-NYT' data-cy='detail_link-to-NYT' href={currentArticle.url} target='_blank'>Go To Full NYT Article</a>
           </div>
           <div className='detail_title-author-container'>
             <h3 className='detail_title' data-cy='detail_title'>{currentArticle.title}</h3>
@@ -60,7 +60,7 @@ function Detail({ title, findArticle }) {
           </div>
           <div className='lower-half-container'>
             <div className='detail_abstract-photo-caption-container'>
-              <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>
+              {currentArticle.abstract && <p className='detail_abstract' data-cy='detail_abstract'>{currentArticle.abstract}</p>}
               <img className='detail_photo' data-cy='detail_photo'src={currentArticle.multimedia[0].url}/>
               <p className='detail_caption' data-cy='detail_caption'>{currentArticle.multimedia[0].caption}</p>
             </div>

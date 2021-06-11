@@ -5,3 +5,11 @@
   font-size: .77em;
   /* height: 100%; */
 }
+
+
+@media (min-width: 800px) {
+
+  .search {
+    margin-right: 5em;
+  }
+}
