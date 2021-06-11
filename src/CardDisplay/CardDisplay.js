@@ -5,12 +5,13 @@ import Search from '../Search/Search';
 function CardDisplay({ articlesToDisplay, type, setType }) {
 
   const makeCards = (currentArticles) => {
-
+  
     return currentArticles.map(article => {
+      console.log(article)
       return <Card 
                 title={article.title.replaceAll('%','Percent')}
-                img={article.multimedia[4].url}
-                caption={article.multimedia[4].caption}
+                img={article.multimedia ? article.multimedia[4].url : 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/New_York_Times_logo_variation.jpg/750px-New_York_Times_logo_variation.jpg'}
+                caption={article.multimedia ? article.multimedia[4].caption : 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/New_York_Times_logo_variation.jpg/750px-New_York_Times_logo_variation.jpg'}
                 authors={article.byline}
                 updated={article.updated_date}
              />

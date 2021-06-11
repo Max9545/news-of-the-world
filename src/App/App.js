@@ -14,9 +14,10 @@ function App() {
 
   useEffect(() => {
     getArticles(type)
+    // .then(d => console.log(d))
     .then(data => setArticles(data.results))
   },[type])
-
+  console.log(articles)
   const findArticle = (title) => {
     return articles.find(article => {
       return article.title === title
@@ -29,7 +30,8 @@ function App() {
         <Header/>
       <Switch>
         <Route exact path='/article/:title' render={({ match }) => <Detail title={match.params.title} findArticle={findArticle} />}/>
-        <Route exact path='/' render={() => <CardDisplay type={type} setType={setType} articlesToDisplay={articles}/>}/>
+        {articles && 
+          <Route exact path='/' render={() => <CardDisplay type={type} setType={setType} articlesToDisplay={articles}/>}/>}
       </Switch>
     </div>
   );
