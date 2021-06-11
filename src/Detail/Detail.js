@@ -69,7 +69,7 @@ function Detail({ title, findArticle }) {
               <p className='detail_news-sections' data-cy='detail_news-sections' >{`Sections: ${currentArticle.section.charAt(0).toUpperCase() + currentArticle.section.slice(1)}`}</p>
               <p className='detail_date' data-cy='detail_date'>{readableDate}</p>
               <p className='detail_relevant-orgs' data-cy='detail_relevant-orgs'>{`Relevant Organiztions: ${showRelevantList(currentArticle.org_facet)}`}</p>
-              <p className='detail_relevant-people' data-cy='detail_relevant-people'>{`Relevant People: ${showRelevantList(currentArticle.per_facet)}`}</p>
+              <p className='detail_relevant-people' data-cy='detail_relevant-people'>{currentArticle.per_facet[0] && `Relevant People: ${showRelevantList(currentArticle.per_facet)}`}</p>
             </div>
           </div>
         </div>
